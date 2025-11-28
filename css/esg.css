@@ -1,0 +1,30 @@
+.intro-img {
+    width: 100%;
+}
+
+@media screen and (min-width: 800px) {
+    .gridbox {
+        margin-top: 5rem;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+
+    .gridbox ul {
+        grid-row: 2/3;
+        grid-column: 1/2;
+    }
+
+    .gridbox span {
+        grid-row: 1/4;
+        grid-column: 2/3;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .gridbox p {
+        grid-row: 3/4;
+        grid-column: 1/2;
+    }
+}

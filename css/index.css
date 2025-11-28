@@ -1,0 +1,81 @@
+.aboutExpanded {
+    display: none;
+}
+
+.company-name {
+    color: #003366;
+    font-size: 2rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    line-height: 1.2;
+}
+
+.description {
+    font-size: 1.1rem;
+    text-align: right;
+}
+
+#esg-pic {
+    width: 100%;
+}
+
+.learn-more {
+    color: gray;
+    font-size: 70%;
+}
+
+#direction li,
+#reasons li {
+    padding: 5px 0px;
+}
+
+h2 {
+    padding-top: 2rem;
+    margin: 0px;
+}
+
+#pc-esg {
+        display: none;
+    }
+
+@media screen and (min-width: 800px) {
+    .aboutExpanded {
+        display: block;
+    }
+
+    .learn-more {
+        display: none;
+    }
+
+    #esg-pic {
+        display: none;
+    }
+
+    #pc-esg {
+        display: block;
+    }
+
+    .about {
+        display: grid;
+    }
+
+    .about .aboutSum {
+        grid-column: 1/2;
+        margin-bottom: 0rem;
+    }
+
+    .about span {
+        grid-column: 2/3;
+        grid-row:2/4;
+        padding-left:1rem;
+    }
+
+    .about span {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+
+
+}

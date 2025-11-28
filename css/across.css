@@ -1,0 +1,311 @@
+:root {
+    --header-height: 15vh;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
+}
+
+nav {
+    background-color: white;
+    position: fixed;
+    top: var(--header-height);
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    transition: right 0.5s ease;
+    font-size: 120%;
+}
+
+nav.after {
+    right: 0px;
+}
+
+
+nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0rem;
+}
+
+header {
+    background-color: white;
+    position: sticky;
+    height: 15vh;
+    border-bottom: 5px solid gray;
+    box-sizing: border-box;
+    top: 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.company-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+
+}
+
+.company-info p {
+
+    margin-top: 0px;
+    font-size: small;
+    font-weight: 600;
+    color: #1B1D96;
+
+    transition: font-size 0.3s;
+}
+
+.company-info img {
+    margin: 8px;
+    margin-bottom: 2px;
+    height: 10vh;
+    transition: height 0.3s;
+
+}
+
+nav ul li {
+    list-style: none;
+    font-size: 20px;
+    border-bottom: 1px solid gray;
+    padding: 1rem 0rem;
+}
+
+nav a {
+    padding: 0rem 1rem;
+}
+
+nav li ul {
+    margin-top: 1rem;
+}
+
+nav li ul li a {
+    padding: 0rem 2.5rem;
+}
+
+#service {
+    padding-bottom: 0rem;
+    border-bottom: 0px;
+}
+
+nav ul li:first-of-type {
+    border-top: 1px solid gray;
+}
+
+#menu-icon {
+    padding-right: 10px;
+    font-size: 2.5rem;
+    color: #1B1D96;
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100vb;
+    height: 100vb;
+    position: fixed;
+    top: 0px;
+    display: none;
+}
+
+header.shrink {
+    animation: shrink 0.3s forwards;
+}
+
+@keyframes shrink {
+    0% {
+        height: 15vh;
+        border-bottom: 5px solid gray;
+    }
+
+    100% {
+        height: 10vh;
+        border-bottom: 2px solid gray;
+    }
+}
+
+header.shrink .company-info img {
+    height: 7vh;
+}
+
+header.shrink .company-info p {
+    font-size: x-small;
+}
+
+body {
+    margin: 0px;
+}
+
+
+main {
+    margin: 0px 1rem;
+    font-size: 125%;
+    line-height: 1.5;
+    color: #333;
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+
+}
+
+html,
+body {
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+nav a {
+    color: #333;
+    text-decoration: none;
+}
+
+footer a {
+    color: white;
+    text-decoration: none;
+}
+
+#contact-info {
+    margin-top: 2rem;
+    padding: 10px 1.5rem;
+    box-sizing: border-box;
+    text-align: center;
+    background-color: #222;
+}
+
+footer div ul:first-child {
+    padding-left: 0px;
+}
+
+footer li {
+    padding: 4px 0px;
+    list-style: none;
+}
+
+em {
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@media screen and (min-width: 800px) {
+    .wrapper {
+        max-width: 800px;
+        margin: auto;
+        background-color: white;
+    }
+
+    main {
+        font-size: 100%;
+        line-height: 1;
+    }
+
+    footer {
+        height: 30vh;
+        margin-top: 10vh;
+    }
+
+    header {
+        padding: 0 1rem;
+    }
+
+    #menu-icon {
+        display: none;
+    }
+
+    nav {
+        position: static;
+        width: auto;
+        height: auto;
+        right: auto;
+        top: auto;
+        display: flex;
+
+        flex-direction: row;
+        justify-content: flex-end;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: row;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        gap: 2rem;
+    }
+
+    nav li ul {
+        display: none;
+    }
+
+    nav ul li:first-of-type {
+        border-top: 0px;
+    }
+
+    nav ul li {
+        border: none;
+        padding: 0.5rem 0;
+        list-style: none;
+    }
+
+    .company-info {
+        width: auto;
+    }
+
+    .footer-content {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 4rem;
+    }
+
+    footer ul:first-child {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    footer ul:first-child ul {
+        padding: 0px;
+    }
+
+    footer ul:first-child ul li:first-child {
+        padding-top: 8px;
+    }
+
+    header.shrink {
+        animation: 0;
+    }
+
+    header {
+        height: 10vh;
+        border-bottom: 2px solid gray;
+    }
+
+    header .company-info img {
+        height: 7vh;
+    }
+
+    header .company-info p {
+        font-size: x-small;
+    }
+}
